@@ -10,10 +10,18 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'AzureRMPipeline-conn'
+    subscriptionId: 'af90ae2f-d51c-4553-9a3d-498c9db51450'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'azureVMOne_group'
+    location: 'East US'
+    templateLocation: 'Linked artifact'
+    csmFile: 'CreateWebApp/azuredeploy.json'
+    overrideParameters: '-projectName ARMTemploateDeployment -linkedTemplateUri https://github.com/sibiv196/azure-splunk/blob/main/CreateWebApp/linkedStorageAccount.json'
+    deploymentMode: 'Incremental'
+    deploymentName: 'DeployPipelineTemplate'
+
