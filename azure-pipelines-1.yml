@@ -1,0 +1,26 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'AzureRMPipeline-conn'
+    subscriptionId: 'af90ae2f-d51c-4553-9a3d-498c9db51450'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'azureVMOne_group'
+    location: 'East US'
+    templateLocation: 'Linked artifact'
+    csmFile: 'https://github.com/sibiv196/azure-splunk/blob/main/VMCreation/VMDeployAzureTemplate.json'
+    csmParametersFile: 'https://github.com/sibiv196/azure-splunk/blob/main/VMCreation/VMDeployAzureParameters.json'
+    overrideParameters: '-projectName VmTemplDep'
+    deploymentMode: 'Incremental'
+    deploymentName: 'DeployPipelineTemplate'
