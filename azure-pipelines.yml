@@ -21,7 +21,7 @@ steps:
     location: 'East US'
     templateLocation: 'Linked artifact'
     csmFile: 'CreateWebApp/azuredeploy.json'
-    overrideParameters: '-projectName VmTemplDep -linkedTemplateUri https://github.com/sibiv196/azure-splunk/'
+    overrideParameters: '-projectName VmTemplDep -linkedTemplateUri https://github.com/sibiv196/azure-splunk/blob/main/CreateWebApp/linkedStorageAccount.json'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
 
