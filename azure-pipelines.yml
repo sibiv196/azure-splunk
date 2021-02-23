@@ -21,7 +21,7 @@ steps:
     location: 'East US'
     templateLocation: 'Linked artifact'
     csmFile: 'VMCreation/VMDeployAzureTemplate.json'
-    csmParametersFile: 'VMCreation/VMDeployAzureParamters.json'
+    csmParametersFile: 'https://github.com/sibiv196/azure-splunk/blob/main/VMCreation/VMDeployAzureParameters.json'
     overrideParameters: '-projectName VmTemplDep'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
