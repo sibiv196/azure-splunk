@@ -1,0 +1,54 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "networkInterfaceName": {
+            "value": "machinewithencryptio950"
+        },
+        "networkSecurityGroupId": {
+            "value": "/subscriptions/af90ae2f-d51c-4553-9a3d-498c9db51450/resourceGroups/azureVMOne_group/providers/Microsoft.Network/networkSecurityGroups/firstVM-nsg"
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/af90ae2f-d51c-4553-9a3d-498c9db51450/resourceGroups/azureVMOne_group/providers/Microsoft.Network/virtualNetworks/azureVMOne_group-vnet"
+        },
+        "publicIpAddressName": {
+            "value": "machineWithEncryption-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "virtualMachineName": {
+            "value": "machineWithEncryption"
+        },
+        "virtualMachineComputerName": {
+            "value": "machineWithEncryption"
+        },
+        "virtualMachineRG": {
+            "value": "azureVMOne_group"
+        },
+        "osDiskType": {
+            "value": "StandardSSD_LRS"
+        },
+        "diskEncryptionSetId": {
+            "value": "/subscriptions/af90ae2f-d51c-4553-9a3d-498c9db51450/resourceGroups/AZUREVMONE_GROUP/providers/Microsoft.Compute/diskEncryptionSets/customerBasedDiskES"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_A1"
+        },
+        "adminUsername": {
+            "value": "azureuser"
+        },
+        "adminPublicKey": {
+            "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCy5kJ5PU65SAPeYzh2RZeScmDBpPqDWjEbnyf4bfbYsvbjvImp3PhFea24anT560Ojko25uah0P4Npmi1Km3SAdTUvIf0E4O9TVKSfqTipZ4LXg9stH6ya618LJ2hlL/YDulMedQAHyLRx9mGczpIB/bdivkO5k6fPJbGC0oy5bIHk8md4+u74yPMMcLp1huuhNV7Leoqj0w8fpvTyXi4pEh3qNtKxNpYJqmgw00o1GZkSU8nylzeVInhWwoxBh0nfwvRwaLIrjOfCuUnzpHtcPL2KSgvRvheVfnHcjvlogSP51xzf98Cf77+YP5Dyyg5m19LN04jJWB6eTlbFxJNEJr9b1GiO47DOCNR45rYD1sTWGHbCudA/28T0ii0BSEW8tyZUbm5eoKuDyMq9NiFVO80gb5X11OXtYc7WSWO3BXkXjIFewrKcU8ZceN0kMn99GG4Oo62vvRlY8EAe851X+eChwgBludmFomK7KQ66efbY4SAM6fwvKtTwLf7ptQM= generated-by-azure"
+        }
+    }
+}
